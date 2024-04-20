@@ -1,33 +1,22 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from "react-router-dom";
 import Button from '../components/Button';
 import TextField from '../components/TextField';
 
 const NGOPage = () => {
-    const ngos = [
-        {
-            id: 1,
-            name: "NGO 1",
-            description: "This is NGO 1",
-            donation: 100
-        },
-        {
-            id: 2,
-            name: "NGO 2",
-            description: "This is NGO 2",
-            donation: 200
-        },
-        {
-            id: 3,
-            name: "NGO 3",
-            description: "This is NGO 3",
-            donation: 300
-        }
-    ];
+    const [selectedNGO, setSelectedNGO] = useState(null);
     const { id } = useParams();
     console.log(id);
-    const selectedNGO = ngos.find(ngo => ngo.id === parseInt(id));
-
+    useEffect(() => {
+        fetch(`http://localhost:3000/ngos/`)
+            .then(res => res.json())
+            .then(data => {
+                setSelectedNGO(data.find(ngo => ngo._id === id));
+            })
+            .catch(err => {
+                console.log(err);
+            });
+    }, [id]);
     // State to store selected image file
     const [imageFile, setImageFile] = useState(null);
 
@@ -40,12 +29,13 @@ const NGOPage = () => {
     if (selectedNGO) {
         return (
             <div className='flex items-center justify-between w-full h-100vh-h-12'>
-                <div className='w-2/3 flex items-center justify-center flex-col'>
+                <div className='w-2/3 flex items-start justify-center flex-col p-24'>
                     <p className='font-bold text-2xl'>
-                        {selectedNGO.name}
+                        {selectedNGO.ngoName}
                     </p>
-                    <p className=''>{selectedNGO.description}</p>
-                    <p className=''>Donation: {selectedNGO.donation}</p>
+                    <p className=''>{selectedNGO.ngoDescription}</p>
+                    <p><span className='font-bold'>Address:</span> {selectedNGO.ngoAddress}</p>
+                    <p><span className='font-bold'>Phone:</span> {selectedNGO.ngoPhone}</p>
                 </div>
                 <div className='w-1/3 flex items-center justify-center flex-col'>
                     <p className='font-bold mb-4'>Reach out to this NGO</p>

@@ -50,7 +50,7 @@ const Navbar = () => {
 
                 </div>
                 <div className='flex items-center justify-end flex-1'>
-                    {loginned ? <p onClick={() => logout()} className='p-4 hover:text-secondary transition duration-150'>Logout</p> : <Link to={'/login'}><p className='p-4 hover:text-secondary transition duration-150'>Login</p></Link>}
+                    {loginned ? <p onClick={() => logout()} className='p-4 hover:text-secondary transition duration-150'>Logout</p> : <Link to={'/login'}><p className='p-4 hover:text-secondary transition duration-150'>Login/Register</p></Link>}
                 </div>
             </nav>
             <Outlet />
