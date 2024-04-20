@@ -2,9 +2,14 @@ import React, { useState } from 'react';
 import TextField from '../components/TextField';
 import Button from '../components/Button';
 import { useAuth } from '../hooks/useAuth';
+import { Link, Navigate } from 'react-router-dom';
+
 
 const Login = () => {
-    const { login } = useAuth();
+    const { login, user } = useAuth();
+    if (user) {
+        return <Navigate to="/" />;
+    }
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
@@ -19,7 +24,7 @@ const Login = () => {
                     password,
                 });
             }}>Login</Button>
-            <a href="/register" className='mt-4'>Don't have an account? Register here</a>
+            <Link to="/register" className='mt-4'>Don't have an account? Register here</Link>
         </div>
     );
 };

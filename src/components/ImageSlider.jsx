@@ -21,13 +21,13 @@ const ImageCarousel = ({ images }) => {
                     Transforming Lives
                 </h2>
                 <br />
-                <h3 className='pt-20 text-2xl text-white z-10' style={{ textShadow: '5px 5px 40px black, -5px -5px 40px black, -5px 5px 40px black, 5px -5px 40px black' }}>
-                We are a passionate team of innovators driven by the vision of leveraging technology for social good. <br />
-                With a commitment to open innovation and community empowerment, we come together to create Jan-seva-setu, <br />
-                a platform aimed at fostering connections between NGOs and individuals in need. <br />
-                Our shared dedication fuels our mission to bridge gap between the common man and those in need.
+                <h3 className='pt-20 text-xl text-white z-10' style={{ textShadow: '5px 5px 40px black, -5px -5px 40px black, -5px 5px 40px black, 5px -5px 40px black' }}>
+                    We are a passionate team of innovators driven by the vision of leveraging technology for social good. <br />
+                    With a commitment to open innovation and community empowerment, we come together to create Jan-seva-setu, <br />
+                    a platform aimed at fostering connections between NGOs and individuals in need. <br />
+                    Our shared dedication fuels our mission to bridge gap between the common man and those in need.
                 </h3>
-                
+
             </div>
             <div className='flex transition-transform duration-1000 ease-in-out' style={{ width: `${imageCount * 100}%`, transform: `translateX(-${currentImageIndex * (100 / imageCount)}%)` }}>
                 {images.map((image, index) => (

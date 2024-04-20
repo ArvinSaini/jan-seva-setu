@@ -48,7 +48,7 @@ const Navbar = () => {
                     {links.map((link, index) => {
                         return (
                             <Link key={index} to={link.path}>
-                                <p className={`p-4 hover:text-secondary transition duration-150 ${href === link.path ? 'font-bold' : ''}`}>
+                                <p className={`p-4 hover:text-secondary transition duration-150 ${href === link.path ? 'text-secondary font-bold' : ''}`}>
                                     {link.name}
                                 </p>
                             </Link>

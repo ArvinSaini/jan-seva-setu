@@ -16,7 +16,7 @@ const NGOs = () => {
             });
     }, []);
     return (
-        <div className='flex flex-col items-center justify-between w-full h-100vh-h-12'>
+        <div className='flex flex-col items-center justify-between w-full h-100vh-h-12 mt-4'>
             <div className='font-bold text-2xl'>Find NGOs</div>
             < div className='flex flex-col w-full items-center justify-center' >
                 {ngos &&

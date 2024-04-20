@@ -2,7 +2,7 @@ import React from 'react';
 
 const Gallery = () => {
   return (
-    <div className="flex items-center justify-center flex-col mt-24">
+    <div className="flex items-center justify-center flex-col mt-4 mb-12">
       <p className='font-bold text-2xl'>Gallery</p>
       <div className="flex items-center justify-center flex-wrap gap-5 mt-6">
         <div>

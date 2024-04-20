@@ -71,7 +71,7 @@ export const AuthProvider = ({ children }) => {
                     return;
                 }
                 alert('A team will pick up the donation item from the given address at given time. Thank you for your donation!');
-                navigate('/donate');
+                navigate('/');
             })
             .catch((err) => {
                 console.log(err);
