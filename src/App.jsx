@@ -9,6 +9,7 @@ import NGOPage from './pages/NGOPage';
 import ProtectedRoute from './pages/ProtectedRoute';
 import { AuthProvider } from './hooks/useAuth';
 import Footer from './components/Footer';
+import Faq from './pages/Faq';
 
 
 const router = createBrowserRouter(
@@ -19,6 +20,9 @@ const router = createBrowserRouter(
         <Footer />
       </AuthProvider>
     }>
+      <Route index element={<Home />} />
+      <Route path="gallery" element={<Gallery />} />
+      <Route path="faq" element={<Faq />} />
       <Route path="login" element={<Login />} />
       <Route path="donate" element={<Donate />} />
       <Route path="ngos" element={
