@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
 import { AuthProvider } from './hooks/useAuth';
+import { Faq } from './pages/Faq';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -13,7 +14,6 @@ const router = createBrowserRouter(
         <Navbar />
       </AuthProvider>
     }>
-      <Route index element={<Gallery />} />
       <Route path="login" element={<Login />} />
       <Route path="dashboard" element={<Dashboard />} />
     </Route>
