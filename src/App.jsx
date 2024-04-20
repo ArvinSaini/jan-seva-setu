@@ -14,7 +14,7 @@ const router = createBrowserRouter(
         <Navbar />
       </AuthProvider>
     }>
-      <Route index element={<Faq  />} />
+      <Route index element={<Home  />} />
       <Route path="login" element={<Login />} />
       <Route path="dashboard" element={<Dashboard />} />
     </Route>
