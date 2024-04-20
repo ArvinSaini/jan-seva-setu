@@ -25,7 +25,7 @@ const Navbar = () => {
     ];
     return (
         <>
-            <nav className={'px-8 flex items-center justify-center sticky top-0 w-full bg-background rounded-b-3xl h-16'}>
+            <nav className={'sticky top-0 z-50 px-8 flex items-center justify-center w-full bg-background rounded-b-3xl h-16'}>
                 <div className='flex items-center justify-start flex-1'>
                     <p className='p-4'>Jan Seva Setu</p>
                     <p className='select-none'>|</p>
