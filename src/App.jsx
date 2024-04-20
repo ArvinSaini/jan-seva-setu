@@ -1,4 +1,4 @@
-
+import Gallery from './pages/Gallery';
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
@@ -13,7 +13,7 @@ const router = createBrowserRouter(
         <Navbar />
       </AuthProvider>
     }>
-      <Route index element={<Home />} />
+      <Route index element={<Gallery />} />
       <Route path="login" element={<Login />} />
       <Route path="dashboard" element={<Dashboard />} />
     </Route>
