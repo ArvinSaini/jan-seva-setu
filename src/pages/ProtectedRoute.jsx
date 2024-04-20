@@ -2,14 +2,12 @@ import React from 'react';
 import { Navigate } from 'react-router-dom';
 import { useAuth } from '../hooks/useAuth';
 
-const Dashboard = () => {
+const ProtectedRoute = ({ children }) => {
     const { user } = useAuth();
     if (!user) {
         return <Navigate to="/login" />;
     }
-    return (
-        <div>Protected</div>
-    );
+    return children;
 };
 
-export default Dashboard;
+export default ProtectedRoute;

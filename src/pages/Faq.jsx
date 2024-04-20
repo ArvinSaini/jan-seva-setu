@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { ChevronDown } from 'react-feather';
 
-export const Faq = () => {
+const Faq = () => {
   const [activeAccordion, setActiveAccordion] = useState(null);
 
   const toggleAccordion = (index) => {
@@ -9,13 +9,13 @@ export const Faq = () => {
   };
 
   return (
-    <div className='flex items-center justify-center  flex-col h-full'>
-          <h1 className="text-2xl font-bold my-4">Frequently Asked Questions</h1>
+    <div className='flex items-center justify-center flex-col h-100vh-h-12'>
+      <h1 className="text-2xl font-bold my-4">Frequently Asked Questions</h1>
       <div className="wrapper">
-       
-        
 
-        <div className="faq">
+
+
+        <div className="faq max-w-2xl">
           <button
             className={`accordion flex justify-between items-center w-full p-3 rounded-md bg-gray-100 hover:bg-gray-200 focus:outline-none focus:bg-gray-200 ${activeAccordion === 0 ? 'active' : ''}`}
             onClick={() => toggleAccordion(0)}
@@ -28,7 +28,7 @@ export const Faq = () => {
           </div>
         </div>
 
-        <div className="faq">
+        <div className="faq max-w-2xl">
           <button
             className={`accordion flex justify-between items-center w-full p-3 rounded-md bg-gray-100 hover:bg-gray-200 focus:outline-none focus:bg-gray-200 ${activeAccordion === 1 ? 'active' : ''}`}
             onClick={() => toggleAccordion(1)}
@@ -43,7 +43,7 @@ export const Faq = () => {
 
 
 
-        <div className="faq">
+        <div className="faq max-w-2xl">
           <button
             className={`accordion flex justify-between items-center w-full p-3 rounded-md bg-gray-100 hover:bg-gray-200 focus:outline-none focus:bg-gray-200 ${activeAccordion === 1 ? 'active' : ''}`}
             onClick={() => toggleAccordion(2)}
@@ -58,7 +58,7 @@ export const Faq = () => {
 
 
 
-        <div className="faq">
+        <div className="faq max-w-2xl">
           <button
             className={`accordion flex justify-between items-center w-full p-3 rounded-md bg-gray-100 hover:bg-gray-200 focus:outline-none focus:bg-gray-200 ${activeAccordion === 1 ? 'active' : ''}`}
             onClick={() => toggleAccordion(3)}
@@ -72,7 +72,7 @@ export const Faq = () => {
         </div>
 
 
-        <div className="faq">
+        <div className="faq max-w-2xl">
           <button
             className={`accordion flex justify-between items-center w-full p-3 rounded-md bg-gray-100 hover:bg-gray-200 focus:outline-none focus:bg-gray-200 ${activeAccordion === 1 ? 'active' : ''}`}
             onClick={() => toggleAccordion(4)}
@@ -86,8 +86,8 @@ export const Faq = () => {
         </div>
 
 
-        
-        <div className="faq">
+
+        <div className="faq max-w-2xl">
           <button
             className={`accordion flex justify-between items-center w-full p-3 rounded-md bg-gray-100 hover:bg-gray-200 focus:outline-none focus:bg-gray-200 ${activeAccordion === 1 ? 'active' : ''}`}
             onClick={() => toggleAccordion(5)}
@@ -106,3 +106,5 @@ export const Faq = () => {
     </div>
   );
 };
+
+export default Faq;
