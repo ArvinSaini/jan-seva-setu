@@ -8,13 +8,15 @@ import NGOs from './pages/NGOs';
 import NGOPage from './pages/NGOPage';
 import ProtectedRoute from './pages/ProtectedRoute';
 import { AuthProvider } from './hooks/useAuth';
-import { Faq } from './pages/Faq';
+import Footer from './components/Footer';
+
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={
       <AuthProvider>
         <Navbar />
+        <Footer />
       </AuthProvider>
     }>
       <Route path="login" element={<Login />} />
