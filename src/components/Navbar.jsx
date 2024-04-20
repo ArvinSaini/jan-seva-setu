@@ -34,6 +34,10 @@ const Navbar = () => {
         {
             name: 'Donate',
             path: '/donate'
+        },
+        {
+            name: 'About Us',
+            path: '/aboutus'
         }
     ];
     return (
