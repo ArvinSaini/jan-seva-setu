@@ -14,11 +14,24 @@ const Home = () => {
                 <ImageCarousel images={images} />
             </div>
             <div className='flex flex-row'>
-                <div className='w-1/2 h-[200px] bg-blue-300'>
-                    para1
+                <div className='relative w-1/2 h-[200px] bg-cyan-700'>
+                    <div className='absolute z-10 top-[15%] left-[5%] '>
+                        <h2 className='text-2xl text-white'>
+                            People in need of humanatarian aid are many, <br />
+                            From the homeless to the orphans, there are <br />
+                            many who go unnoticed even if many organisations<br />
+                            do their best to reach them.
+                        </h2>
+                    </div>
                 </div>
-                <div className='w-1/2 h-[200px]'>
-                    para2
+                <div className='relative w-1/2 h-[200px]'>
+                    <div className='absolute z-10 top-[15%] left-[25%] '>
+                        <h2 className='w-full text-2xl text-center text-black'>
+                            Are you willing to extend a hand? <br />
+                            Donate Now! <br />
+                        <Button>Go To Donate</Button>
+                        </h2>
+                    </div>
                 </div>
             </div>
         </>
