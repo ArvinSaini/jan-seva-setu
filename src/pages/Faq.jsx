@@ -15,7 +15,7 @@ const Faq = () => {
 
 
 
-        <div className="faq">
+        <div className="faq max-w-2xl">
           <button
             className={`accordion flex justify-between items-center w-full p-3 rounded-md bg-gray-100 hover:bg-gray-200 focus:outline-none focus:bg-gray-200 ${activeAccordion === 0 ? 'active' : ''}`}
             onClick={() => toggleAccordion(0)}
@@ -28,7 +28,7 @@ const Faq = () => {
           </div>
         </div>
 
-        <div className="faq">
+        <div className="faq max-w-2xl">
           <button
             className={`accordion flex justify-between items-center w-full p-3 rounded-md bg-gray-100 hover:bg-gray-200 focus:outline-none focus:bg-gray-200 ${activeAccordion === 1 ? 'active' : ''}`}
             onClick={() => toggleAccordion(1)}
@@ -43,7 +43,7 @@ const Faq = () => {
 
 
 
-        <div className="faq">
+        <div className="faq max-w-2xl">
           <button
             className={`accordion flex justify-between items-center w-full p-3 rounded-md bg-gray-100 hover:bg-gray-200 focus:outline-none focus:bg-gray-200 ${activeAccordion === 1 ? 'active' : ''}`}
             onClick={() => toggleAccordion(2)}
@@ -58,7 +58,7 @@ const Faq = () => {
 
 
 
-        <div className="faq">
+        <div className="faq max-w-2xl">
           <button
             className={`accordion flex justify-between items-center w-full p-3 rounded-md bg-gray-100 hover:bg-gray-200 focus:outline-none focus:bg-gray-200 ${activeAccordion === 1 ? 'active' : ''}`}
             onClick={() => toggleAccordion(3)}
@@ -72,7 +72,7 @@ const Faq = () => {
         </div>
 
 
-        <div className="faq">
+        <div className="faq max-w-2xl">
           <button
             className={`accordion flex justify-between items-center w-full p-3 rounded-md bg-gray-100 hover:bg-gray-200 focus:outline-none focus:bg-gray-200 ${activeAccordion === 1 ? 'active' : ''}`}
             onClick={() => toggleAccordion(4)}
@@ -87,7 +87,7 @@ const Faq = () => {
 
 
 
-        <div className="faq">
+        <div className="faq max-w-2xl">
           <button
             className={`accordion flex justify-between items-center w-full p-3 rounded-md bg-gray-100 hover:bg-gray-200 focus:outline-none focus:bg-gray-200 ${activeAccordion === 1 ? 'active' : ''}`}
             onClick={() => toggleAccordion(5)}
