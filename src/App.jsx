@@ -10,6 +10,7 @@ import ProtectedRoute from './pages/ProtectedRoute';
 import { AuthProvider } from './hooks/useAuth';
 import Footer from './components/Footer';
 import Faq from './pages/Faq';
+import Register from './pages/Register';
 
 
 const router = createBrowserRouter(
@@ -24,7 +25,10 @@ const router = createBrowserRouter(
       <Route path="gallery" element={<Gallery />} />
       <Route path="faq" element={<Faq />} />
       <Route path="login" element={<Login />} />
-      <Route path="donate" element={<Donate />} />
+      <Route path="register" element={<Register />} />
+      <Route path="donate" element={<ProtectedRoute>
+        <Donate />
+      </ProtectedRoute>} />
       <Route path="ngos" element={
         <ProtectedRoute>
           <NGOs />
