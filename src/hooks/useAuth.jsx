@@ -78,6 +78,28 @@ export const AuthProvider = ({ children }) => {
             });
     };
 
+    const feedback = async (data) => {
+        fetch('http://localhost:3000/feedback', {
+            credentials: 'include',
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data),
+        })
+            .then((res) => res.json())
+            .then((data) => {
+                if (data.error) {
+                    alert(data.error);
+                    return;
+                }
+                alert('Feedback submitted successfully');
+            })
+            .catch((err) => {
+                console.log(err);
+            });
+    };
+
     const logout = () => {
         fetch('http://localhost:3000/logout')
             .then((res) => res.json())
@@ -100,6 +122,7 @@ export const AuthProvider = ({ children }) => {
             user,
             register,
             donate,
+            feedback,
             login,
             logout,
         }),

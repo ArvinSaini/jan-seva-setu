@@ -7,6 +7,7 @@ import logout from './logout.js';
 import ngos from './ngos.js';
 import cors from 'cors';
 import cookieParser from 'cookie-parser';
+import feedback from './feedback.js';
 
 const app = e();
 
@@ -14,7 +15,7 @@ app.use(e.json());
 app.use(
     cors({
         credentials: true,
-        origin: 'http://localhost:5173',
+        origin: 'https://backend-livid-three.vercel.app',
         exposedHeaders: ['SET-COOKIE'],
     })
 );
@@ -30,3 +31,6 @@ app.post('/register', register);
 app.post('/donate', donate);
 app.get('/logout', logout);
 app.get('/ngos', ngos);
+app.post('/feedback', feedback);
+
+export default app;
