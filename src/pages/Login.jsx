@@ -19,6 +19,7 @@ const Login = () => {
                     password,
                 });
             }}>Login</Button>
+            <a href="/register" className='mt-4'>Don't have an account? Register here</a>
         </div>
     );
 };

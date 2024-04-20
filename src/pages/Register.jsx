@@ -22,6 +22,7 @@ const Register = () => {
                     password,
                 });
             }}>Register</Button>
+            <a href="/login" className='mt-4'>Already have an account? Login here</a>
         </div>
     );
 };

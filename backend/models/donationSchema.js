@@ -8,7 +8,6 @@ const donateSchema = new mongoose.Schema({
     },
     phone: {
         type: Number,
-        required: true,
     },
     item: {
         type: String,
