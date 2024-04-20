@@ -4,7 +4,7 @@ import { faInstagram, faLinkedin, faGithub } from '@fortawesome/free-brands-svg-
 import Image1 from '../assets/dhrv.jpg';
 import Image2 from '../assets/skshm.jpg';
 import Image3 from '../assets/jvnt.jpg';
-import Image4 from '../assets/rvn.jpg';
+import Image4 from '../assets/rvn1.jpg';
 import Image5 from '../assets/ujjwl.jpg';
 
 const Aboutus = () => {
