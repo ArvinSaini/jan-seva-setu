@@ -109,6 +109,7 @@ export const AuthProvider = ({ children }) => {
             headers: {
                 'Content-Type': 'application/json',
                 'Authorization': 'Bearer ' + user.token,
+
             },
             body: JSON.stringify(data),
         })
