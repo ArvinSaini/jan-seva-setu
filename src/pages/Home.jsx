@@ -13,7 +13,7 @@ const Home = () => {
     const { feedback } = useAuth();
     const [message, setMessage] = useState();
     return (
-        <>
+        <div className='mb-8'>
             <div className='flex items-start justify-center h-[611px]'>
                 <ImageCarousel images={images} />
             </div>
@@ -64,7 +64,7 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     );
 };
 

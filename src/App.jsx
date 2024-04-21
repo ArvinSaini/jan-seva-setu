@@ -11,6 +11,7 @@ import { AuthProvider } from './hooks/useAuth';
 import Footer from './components/Footer';
 import Faq from './pages/Faq';
 import Register from './pages/Register';
+import Aboutus from './pages/Aboutus';
 
 
 const router = createBrowserRouter(
@@ -39,6 +40,7 @@ const router = createBrowserRouter(
           <NGOPage />
         </ProtectedRoute>
       } />
+      <Route path="aboutus" element={<Aboutus />} />
     </Route>
   )
 );

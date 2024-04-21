@@ -15,7 +15,7 @@ app.use(e.json());
 app.use(
     cors({
         credentials: true,
-        origin: 'http://localhost:5173',
+        origin: 'https://jan-seva-setu.vercel.app/',
         exposedHeaders: ['SET-COOKIE'],
     })
 );
