@@ -34,7 +34,8 @@ const Donate = () => {
                             item,
                             quantity,
                             description,
-                            pickupDateAndTime
+                            pickupDateAndTime,
+                            token: localStorage.getItem('user').token,
                         });
                         document.getElementById('donateform').reset();
                     }}>Donate</Button>
