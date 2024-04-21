@@ -6,7 +6,9 @@ async function connect() {
         if (connection.readyState !== 0) {
             return;
         }
-        mongoose.connect(process.env.MONGO_URL);
+        mongoose.connect(process.env.MONGO_URL, {
+            useNewUrlParser: true,
+        });
 
         connection.on('connected', () => {
             console.log('MongoDB connected successfully');

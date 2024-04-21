@@ -7,6 +7,7 @@ const donate = async (req, res) => {
     try {
         connect();
         const { name, phone, pickupAddress, item, quantity, description, pickupDateAndTime } = req.body;
+        console.log(req.cookies);
         const data = await getDataFromToken(req.cookies.token);
         const user = await getUser(data);
         const newDonation = new Donate({
