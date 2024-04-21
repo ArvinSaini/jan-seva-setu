@@ -1,6 +1,9 @@
 import Feedback from '../models/feedbackSchema.js';
+import connect from '../db/dbconfig';
+
 const feedback = async (req, res) => {
     try {
+        connect();
         const { message } = req.body;
         if (!message) {
             return res.status(400).json({ error: 'Please fill all the fields' });

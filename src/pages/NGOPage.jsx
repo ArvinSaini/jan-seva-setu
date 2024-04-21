@@ -8,7 +8,7 @@ const NGOPage = () => {
     const { id } = useParams();
     console.log(id);
     useEffect(() => {
-        fetch(`http://localhost:3000/ngos/`)
+        fetch(`https://jan-seva-setu-backend.vercel.app/ngos/`)
             .then(res => res.json())
             .then(data => {
                 setSelectedNGO(data.find(ngo => ngo._id === id));

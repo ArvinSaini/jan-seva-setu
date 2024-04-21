@@ -1,9 +1,11 @@
 import jwt from 'jsonwebtoken';
 import User from '../models/userSchema.js';
 import bcryptjs from 'bcryptjs';
+import connect from '../db/dbconfig';
 
 const login = async (req, res) => {
     try {
+        connect();
         const { email, password } = req.body;
 
         const user = await User.findOne({ email: email });

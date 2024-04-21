@@ -1,8 +1,10 @@
 import bcryptjs from 'bcryptjs';
 import User from '../models/userSchema.js';
+import connect from '../db/dbconfig';
 
 const register = async (req, res) => {
     try {
+        connect();
         const { name, email, password } = req.body;
 
         const user = await User.findOne({ email });

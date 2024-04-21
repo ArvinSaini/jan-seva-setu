@@ -9,7 +9,7 @@ export const AuthProvider = ({ children }) => {
     const navigate = useNavigate();
 
     const login = async (data) => {
-        fetch('http://localhost:3000/login', {
+        fetch('https://jan-seva-setu-backend.vercel.app/login', {
             credentials: 'include',
             method: 'POST',
             headers: {
@@ -33,7 +33,7 @@ export const AuthProvider = ({ children }) => {
     };
 
     const register = async (data) => {
-        fetch('http://localhost:3000/register', {
+        fetch('https://jan-seva-setu-backend.vercel.app/register', {
             credentials: 'include',
             method: 'POST',
             headers: {
@@ -56,7 +56,7 @@ export const AuthProvider = ({ children }) => {
     };
 
     const donate = async (data) => {
-        fetch('http://localhost:3000/donate', {
+        fetch('https://jan-seva-setu-backend.vercel.app/donate', {
             credentials: 'include',
             method: 'POST',
             headers: {
@@ -79,7 +79,7 @@ export const AuthProvider = ({ children }) => {
     };
 
     const feedback = async (data) => {
-        fetch('http://localhost:3000/feedback', {
+        fetch('https://jan-seva-setu-backend.vercel.app/feedback', {
             credentials: 'include',
             method: 'POST',
             headers: {
@@ -101,7 +101,7 @@ export const AuthProvider = ({ children }) => {
     };
 
     const logout = () => {
-        fetch('http://localhost:3000/logout')
+        fetch('https://jan-seva-setu-backend.vercel.app/logout')
             .then((res) => res.json())
             .then((data) => {
                 if (data.error) {

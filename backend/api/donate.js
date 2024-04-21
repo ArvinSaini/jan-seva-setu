@@ -1,9 +1,11 @@
 import getDataFromToken from '../db/getDataFromToken.js';
 import getUser from '../db/getUser.js';
 import Donate from '../models/donationSchema.js';
+import connect from '../db/dbconfig';
 
 const donate = async (req, res) => {
     try {
+        connect();
         const { name, phone, pickupAddress, item, quantity, description, pickupDateAndTime } = req.body;
         const data = await getDataFromToken(req.cookies.token);
         const user = await getUser(data);

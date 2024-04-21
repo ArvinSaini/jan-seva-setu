@@ -1,5 +1,7 @@
+import connect from '../db/dbconfig';
 const logout = async (req, res) => {
     try {
+        connect();
         res.clearCookie('token');
         return res.json({ message: 'Logged out successfully' });
     } catch (error) {

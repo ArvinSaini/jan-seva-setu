@@ -6,7 +6,7 @@ const NGOs = () => {
     const navigate = useNavigate();
     const [ngos, setNgos] = useState();
     useEffect(() => {
-        fetch('http://localhost:3000/ngos')
+        fetch('https://jan-seva-setu-backend.vercel.app/ngos')
             .then(res => res.json())
             .then(data => {
                 setNgos(data);

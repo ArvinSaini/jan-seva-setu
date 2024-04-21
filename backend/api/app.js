@@ -15,14 +15,13 @@ app.use(e.json());
 app.use(
     cors({
         credentials: true,
-        origin: 'https://backend-livid-three.vercel.app',
+        origin: 'http://localhost:5173',
         exposedHeaders: ['SET-COOKIE'],
     })
 );
 app.use(cookieParser());
 
 app.listen(3000, () => {
-    connect();
     console.log('server is running on port 3000');
 });
 
