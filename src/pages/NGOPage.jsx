@@ -46,13 +46,13 @@ const NGOPage = () => {
                         <div className='flex items-start justify-center flex-col'>
                             <TextField onChange={(e) => setAddress(e.target.value)} type="text" placeholder="Address" className="mb-5" />
                             <TextField onChange={(e) => setMessage(e.target.value)} type="text" placeholder="Message" className="mb-5" />
-                            {/* <input type="file" accept="image/*" id="imageInput" name="imageInput" onChange={handleImageChange} />
+                            <input type="file" accept="image/*" id="imageInput" name="imageInput" onChange={handleImageChange} />
                             {imageFile && (
                                 <div>
                                     <p className='mt-4'>Image Preview:</p>
                                     <img src={URL.createObjectURL(imageFile)} alt="Preview" style={{ maxWidth: '100%', maxHeight: '200px', marginTop: '10px' }} />
                                 </div>
-                            )} */}
+                            )}
                             <Button onClick={() =>
                                 reachout({
                                     id: selectedNGO._id, message, address
