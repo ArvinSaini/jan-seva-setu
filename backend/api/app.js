@@ -15,7 +15,7 @@ app.use(e.json());
 app.use(
     cors({
         credentials: true,
-        origin: 'https://jan-seva-setu.vercel.app/',
+        origin: 'https://jan-seva-setu.vercel.app',
         exposedHeaders: ['SET-COOKIE'],
     })
 );
