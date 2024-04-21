@@ -85,6 +85,7 @@ export const AuthProvider = ({ children }) => {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
+                'Authorization': 'Bearer ' + user.token,
             },
             body: JSON.stringify(data),
         })
@@ -107,6 +108,7 @@ export const AuthProvider = ({ children }) => {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
+                'Authorization': 'Bearer ' + user.token,
             },
             body: JSON.stringify(data),
         })

@@ -8,7 +8,8 @@ const reachout = async (req, res) => {
     try {
         connect();
         const { id, address, message } = req.body;
-        const data = await getDataFromToken(req.cookies.token);
+        const token = req.headers.authorization.split(' ')[1];
+        const data = await getDataFromToken(token);
         const ngo = await getNGO(id);
         const user = await getUser(data);
         const newReachOut = new ReachOut({
