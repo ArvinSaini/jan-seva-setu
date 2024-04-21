@@ -6,7 +6,8 @@ import connect from '../db/dbconfig';
 const donate = async (req, res) => {
     try {
         connect();
-        const { name, phone, pickupAddress, item, quantity, description, pickupDateAndTime, token } = req.body;
+        const { name, phone, pickupAddress, item, quantity, description, pickupDateAndTime } = req.body;
+        const token = req.headers.authorization.split(' ')[1];
         const data = await getDataFromToken(token);
         const user = await getUser(data);
         const newDonation = new Donate({
