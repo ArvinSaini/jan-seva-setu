@@ -100,6 +100,28 @@ export const AuthProvider = ({ children }) => {
             });
     };
 
+    const reachout = async (data) => {
+        fetch('https://jan-seva-setu-backend.vercel.app/reachout', {
+            credentials: 'include',
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data),
+        })
+            .then((res) => res.json())
+            .then((data) => {
+                if (data.error) {
+                    alert(data.error);
+                    return;
+                }
+                alert('Your message has been sent to the NGO');
+            })
+            .catch((err) => {
+                console.log(err);
+            });
+    };
+
     const logout = () => {
         fetch('https://jan-seva-setu-backend.vercel.app/logout')
             .then((res) => res.json())
@@ -123,6 +145,7 @@ export const AuthProvider = ({ children }) => {
             register,
             donate,
             feedback,
+            reachout,
             login,
             logout,
         }),

@@ -55,10 +55,13 @@ const Home = () => {
                         <div className='absolute z-10 top-[15%] left-[25%] '>
                             <h2 className='w-full text-2xl text-center justify-center text-white'>
                                 Any Feedback for us?<br />
-                                <TextField onChange={(e) => setMessage(e.target.value)} className='w-[100%] mt-5 text-black' />
-                                <Button onClick={() => feedback({
-                                    message
-                                })} className='py-1 px-2 mt-2'>Submit</Button>
+                                <TextField id="feedback" onChange={(e) => setMessage(e.target.value)} className='w-[100%] mt-5 text-black' />
+                                <Button onClick={() => {
+                                    feedback({
+                                        message
+                                    });
+                                    document.getElementById('feedback').value = '';
+                                }} className='py-1 px-2 mt-2'>Submit</Button>
                             </h2>
                         </div>
                     </div>

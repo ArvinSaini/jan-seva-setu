@@ -8,6 +8,7 @@ import ngos from './ngos.js';
 import cors from 'cors';
 import cookieParser from 'cookie-parser';
 import feedback from './feedback.js';
+import reachout from './reachout.js';
 
 const app = e();
 
@@ -31,5 +32,6 @@ app.post('/donate', donate);
 app.get('/logout', logout);
 app.get('/ngos', ngos);
 app.post('/feedback', feedback);
+app.post('/reachout', reachout);
 
 export default app;

@@ -18,7 +18,7 @@ const Donate = () => {
             <p className=''>You can donate us books, toys, clothes or any item by filling this form below or donate money by simply scanning the QR code below.</p>
             <div className='flex items-center justify-between w-2/3 m-4 bg-white rounded-2xl border p-12'>
                 <div>
-                    <form className='grid grid-cols-2 gap-2 items-center justify-center flex-col'>
+                    <form id="donateform" className='grid grid-cols-2 gap-2 items-center justify-center flex-col'>
                         <TextField type="text" placeholder="Phone" className="mb-5" onChange={(e) => setPhone(e.target.value)} />
                         <TextField type="text" placeholder="Pickup Address" className="mb-5" onChange={(e) => setPickupAddress(e.target.value)} />
                         <TextField type="text" placeholder="Item" className="mb-5" onChange={(e) => setItem(e.target.value)} />
@@ -27,14 +27,17 @@ const Donate = () => {
                         <TextField type="datetime-local" placeholder="Pickup Date and Time" className="mb-5" onChange={(e) => setPickupDateAndTime(e.target.value)} />
 
                     </form>
-                    <Button onClick={() => donate({
-                        phone,
-                        pickupAddress,
-                        item,
-                        quantity,
-                        description,
-                        pickupDateAndTime
-                    })}>Donate</Button>
+                    <Button onClick={() => {
+                        donate({
+                            phone,
+                            pickupAddress,
+                            item,
+                            quantity,
+                            description,
+                            pickupDateAndTime
+                        });
+                        document.getElementById('donateform').reset();
+                    }}>Donate</Button>
                     <p className='text-center text-secondary'>We will send our donation team to pick up items to be donated from your home or workplace.</p>
                 </div>
 

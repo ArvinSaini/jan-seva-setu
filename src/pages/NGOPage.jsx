@@ -2,11 +2,14 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from "react-router-dom";
 import Button from '../components/Button';
 import TextField from '../components/TextField';
+import { useAuth } from '../hooks/useAuth';
 
 const NGOPage = () => {
     const [selectedNGO, setSelectedNGO] = useState(null);
+    const [message, setMessage] = useState();
+    const [address, setAddress] = useState();
     const { id } = useParams();
-    console.log(id);
+    const { reachout } = useAuth();
     useEffect(() => {
         fetch(`https://jan-seva-setu-backend.vercel.app/ngos/`)
             .then(res => res.json())
@@ -41,8 +44,8 @@ const NGOPage = () => {
                     <p className='font-bold mb-4'>Reach out to this NGO</p>
                     <div className='p-6 bg-white border rounded-2xl'>
                         <form className='flex items-start justify-center flex-col'>
-                            <TextField type="text" placeholder="Address" className="mb-5" />
-                            <TextField type="text" placeholder="Message" className="mb-5" />
+                            <TextField onChange={(e) => setAddress(e.target.value)} type="text" placeholder="Address" className="mb-5" />
+                            <TextField onChange={(e) => setMessage(e.target.value)} type="text" placeholder="Message" className="mb-5" />
                             <input type="file" accept="image/*" id="imageInput" name="imageInput" onChange={handleImageChange} />
                             {imageFile && (
                                 <div>
@@ -50,7 +53,11 @@ const NGOPage = () => {
                                     <img src={URL.createObjectURL(imageFile)} alt="Preview" style={{ maxWidth: '100%', maxHeight: '200px', marginTop: '10px' }} />
                                 </div>
                             )}
-                            <Button className="mt-5">Submit</Button>
+                            <Button onClick={() => {
+                                reachout({
+                                    id, message, address
+                                });
+                            }} className="mt-5">Submit</Button>
                         </form>
                     </div>
                 </div>
