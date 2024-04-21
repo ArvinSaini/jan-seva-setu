@@ -47,8 +47,8 @@ export const AuthProvider = ({ children }) => {
                     alert(data.error);
                     return;
                 }
-                setUser(data);
-                navigate('/ngos');
+                alert('Registered successfully! Please login');
+                navigate('/login');
             })
             .catch((err) => {
                 console.log(err);
