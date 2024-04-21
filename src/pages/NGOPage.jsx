@@ -55,7 +55,7 @@ const NGOPage = () => {
                             )} */}
                             <Button onClick={() => {
                                 reachout({
-                                    id, message, address
+                                    id: selectedNGO._id, message, address
                                 });
                             }} className="mt-5">Submit</Button>
                         </form>

@@ -1,5 +1,6 @@
 import getDataFromToken from '../db/getDataFromToken.js';
 import getNGO from '../db/getNGO.js';
+import getUser from '../db/getUser.js';
 import Donate from '../models/donationSchema.js';
 import connect from '../db/dbconfig';
 import ReachOut from '../models/reachOutSchema.js';
@@ -8,6 +9,7 @@ const reachout = async (req, res) => {
     try {
         connect();
         const { id, address, message } = req.body;
+        console.log(req.headers);
         const token = req.headers.authorization.split(' ')[1];
         const data = await getDataFromToken(token);
         const ngo = await getNGO(id);
