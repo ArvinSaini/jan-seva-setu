@@ -30,6 +30,7 @@ const login = async (req, res) => {
         const response = res
             .cookie('token', token, {
                 sameSite: 'none',
+                secure: true,
             })
             .json({
                 message: 'Login successful',
